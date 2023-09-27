@@ -9,6 +9,9 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
+    profile: 'serverless-servicename-agent',
+    region: 'ap-northeast-1',
+    stage: "${opt:stage, 'dev'}",
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
